@@ -12,6 +12,7 @@ body {
   background: radial-gradient(#303b37, #1a1f1d);
   color: #e1eeeb;
   min-height: 100vh;
+  padding: 1rem;
 }
 
 #header {
@@ -49,7 +50,7 @@ body {
   display: block;
   margin-bottom: 0.25rem;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1rem;
+  font-size: .85rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -67,23 +68,59 @@ body {
 #result {
   max-width: 80rem;
   margin: 2rem auto;
-  padding: 1rem;
   table-layout: fixed;
-  border-spacing: 1rem;
   text-align: center;
 }
 
 #result thead {
-  font-size: 1.2rem;
+  font-size: .85rem;
   color: #83e6c0;
 }
 
 #result tbody {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1rem;
+  font-size: .85rem;
   color: #c2e9e0;
+}
+
+
+#result thead th {
+  border: solid #2a976d;
+  border-width: 1px 1px 1px 1px;
+  padding: 1rem;
+}
+
+#result tbody td {
+  border: solid #2a976d;
+  border-width: 1px 1px 1px 1px;
+  padding: 1rem;
 }
 
 .center {
   text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  #user-input {
+    max-width: 100%;
+  }
+
+  .input-group p {
+    margin: 10px 0;
+  }
+
+  #user-input .input-group {
+    gap: 0.5rem;
+  }
+
+  #user-input label {
+    text-align: left;
+  }
+
+  .table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
 }
